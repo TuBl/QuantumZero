@@ -1,0 +1,236 @@
+<template>
+	<div class="grid-container">
+		<div class="grid-container__hero">
+			<h1 class="grid-container__hero-text">
+				Your dream build starts <br />here
+			</h1>
+			<button class="btn">START</button>
+		</div>
+		<div class="grid-container__pre-built">
+			<h1>PRE-BUILT</h1>
+			<div class="image_1">
+				<img src="../assets/pre-built.jpg" alt="" />
+				<h2>Gaming</h2>
+			</div>
+			<div class="image_2">
+				<img src="../assets/pre-built-2.jpg" alt="" />
+				<h2>Productivity</h2>
+			</div>
+		</div>
+		<div class="grid-container__custom-built">
+			<h1>CUSTOM-BUILT</h1>
+			<div class="grid-container__custom-built__text">
+				Do you wish to have something that is made just for you? Take our brief
+				survey and you will be contacted within 1-3 Work days
+			</div>
+			<button class="btn">Lets Get building</button>
+		</div>
+	</div>
+</template>
+
+<script>
+	export default {
+		name: "Landing",
+	};
+</script>
+
+<style lang="scss" scoped>
+	.grid-container {
+		display: grid;
+		height: auto;
+		position: relative;
+		margin-top: -10em;
+		width: 100%;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"hero"
+			"pre-built"
+			"custom-built";
+		grid-template-rows: 100vh 100vh 100vh;
+		&__hero {
+			grid-area: hero;
+			color: #fffffe;
+			height: 100%;
+			width: 100%;
+			font-size: 5em;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: url("../assets/hero.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 50% 50%;
+			background-color: #131516;
+			h1 {
+				text-align: justify;
+				font-size: 0.8em;
+				position: absolute;
+				top: 22%;
+				left: 18%;
+			}
+			.btn {
+				width: 400px;
+				height: 3em;
+				font-size: 2.5rem;
+				left: 61.1%;
+				top: 80%;
+				position: absolute;
+				display: inline-block;
+
+				background: #fe519e;
+				border: 0px;
+				border-radius: 29px;
+			}
+			.btn:hover {
+				cursor: pointer;
+			}
+		}
+
+		&__pre-built {
+			grid-area: pre-built;
+			color: #fffffe;
+			height: 100%;
+			width: 100%;
+			font-size: 2rem;
+			display: flex;
+			flex-wrap: wrap;
+			h1 {
+				width: 100%;
+				margin-top: 3em;
+				margin-bottom: 2em;
+			}
+			h1::after,
+			h1::before {
+				content: "";
+				position: absolute;
+				background: #fe519e;
+				border: 1px solid #fe519e;
+				border-radius: 2%;
+			}
+			h1::after {
+				height: 10px;
+				width: 70px;
+				top: 42.45%;
+				left: 56.5%;
+			}
+			h1::before {
+				height: 10px;
+				width: 70px;
+				left: 58.6%;
+				top: 41.421%;
+				transform: rotate(90deg);
+			}
+
+			.image_1 {
+				height: 100%;
+				width: 50%;
+				&::before,
+				&::after {
+					content: "";
+					position: absolute;
+					background: #fe519e;
+					border: 1px solid #fe519e;
+					border-radius: 2%;
+				}
+				&::before {
+					height: 10px;
+					width: 70px;
+					left: 37.8%;
+					top: 40.4%;
+					transform: rotate(90deg);
+				}
+				&::after {
+					height: 10px;
+					width: 70px;
+					left: 39.7%;
+					top: 39.4%;
+				}
+			}
+			.image_2 {
+				height: 100%;
+				width: 50%;
+			}
+
+			img {
+				height: 420px;
+				width: 480px;
+				border-radius: 2%;
+				box-shadow: 0px 0px 10px #fffffe;
+			}
+		}
+		&__custom-built {
+			grid-area: custom-built;
+			height: 100%;
+			width: 100%;
+			color: #fffffe;
+			font-size: 2rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+
+			h1 {
+				margin-bottom: 1.5em;
+			}
+			h1::after,
+			h1::before {
+				content: "";
+				height: 10px;
+				width: 70px;
+				position: absolute;
+				background: #fe519e;
+				border: 1px solid #fe519e;
+				border-radius: 2%;
+			}
+			h1::after {
+				top: 76.5%;
+				left: 60.5%;
+			}
+			h1::before {
+				left: 62.6%;
+				top: 75.5%;
+				transform: rotate(90deg);
+			}
+
+			&__text {
+				font-size: 2em;
+				width: 50%;
+			}
+			&__text::before,
+			&__text::after {
+				content: "";
+				height: 10px;
+				width: 70px;
+				position: absolute;
+				background: #fe519e;
+				border: 1px solid #fe519e;
+				border-radius: 2%;
+			}
+			&__text::before {
+				top: 74.2%;
+				left: 33.5%;
+				transform: rotate(90deg);
+			}
+			&__text::after {
+				top: 73%;
+				left: 35.05%;
+			}
+			.btn {
+				width: 400px;
+				height: 2.5em;
+				font-size: 2.5rem;
+				left: 39.9%;
+				top: 95%;
+				position: absolute;
+				display: inline-block;
+				background: #fe519e;
+				border: 0px;
+				border-radius: 29px;
+			}
+			.btn:hover {
+				cursor: pointer;
+			}
+		}
+	}
+</style>
