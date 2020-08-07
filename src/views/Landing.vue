@@ -23,7 +23,7 @@
 				Do you wish to have something that is made just for you? Take our brief
 				survey and you will be contacted within 1-3 Work days
 			</div>
-			<button class="btn">Lets Get building</button>
+			<router-link to="/survey" class="btn">Lets Get building</router-link>
 		</div>
 	</div>
 </template>
@@ -227,6 +227,11 @@
 				background: #fe519e;
 				border: 0px;
 				border-radius: 29px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				color: black;
 			}
 			.btn:hover {
 				cursor: pointer;

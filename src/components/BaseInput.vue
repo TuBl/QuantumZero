@@ -1,21 +1,40 @@
 <template>
 	<div class="input-container">
 		<label v-if="label" class="input-container__label">{{ label }}</label>
-		<input type="text" @input="updateValue" />
+		<input
+			:type="type"
+			:value="value"
+			@input="updateValue"
+			v-bind="$attrs"
+			:class="{ error: error }"
+			v-on="listeners"
+		/>
 	</div>
 </template>
 
 <script>
 	export default {
+		inheritAttrs: false,
 		props: {
+			value: [String, Number],
 			label: {
 				type: String,
 				default: "",
 			},
+			type: String,
+			error: Boolean,
 		},
 		methods: {
 			updateValue(event) {
 				this.$emit("input", event.target.value);
+			},
+		},
+		computed: {
+			listeners() {
+				return {
+					...this.$listeners,
+					input: this.updateValue,
+				};
 			},
 		},
 	};
@@ -36,8 +55,10 @@
 		input {
 			width: 100%;
 			height: 5em;
+			font-size: 1.2rem;
 			border-radius: 1%;
 			border: 0px;
+			padding-left: 2em;
 		}
 	}
 </style>

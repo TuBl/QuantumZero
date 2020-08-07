@@ -37,6 +37,9 @@
 	a:hover {
 		color: #fe519e;
 	}
+	.router-link-exact-active {
+		color: #fe519e;
+	}
 	#app {
 		height: 100vh;
 		width: 100vw;
@@ -61,6 +64,9 @@
 			text-align: center;
 			justify-content: center;
 			align-items: center;
+		}
+		.error {
+			border: 2px solid #fe519e;
 		}
 	}
 </style>
