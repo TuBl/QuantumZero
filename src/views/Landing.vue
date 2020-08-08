@@ -4,9 +4,9 @@
 			<h1 class="grid-container__hero-text">
 				Your dream build starts <br />here
 			</h1>
-			<button class="btn">START</button>
+			<router-link to="/survey" class="btn">START</router-link>
 		</div>
-		<div class="grid-container__pre-built">
+		<!-- <div class="grid-container__pre-built">
 			<h1>PRE-BUILT</h1>
 			<div class="image_1">
 				<img src="../assets/pre-built.jpg" alt="" />
@@ -16,7 +16,7 @@
 				<img src="../assets/pre-built-2.jpg" alt="" />
 				<h2>Productivity</h2>
 			</div>
-		</div>
+		</div> -->
 		<div class="grid-container__custom-built">
 			<h1>CUSTOM-BUILT</h1>
 			<div class="grid-container__custom-built__text">
@@ -44,9 +44,10 @@
 		grid-template-columns: 1fr;
 		grid-template-areas:
 			"hero"
-			"pre-built"
+			// "pre-built"
 			"custom-built";
-		grid-template-rows: 100vh 100vh 100vh;
+		grid-template-rows: 100vh 100vh;
+		margin-bottom: 3.5em;
 		&__hero {
 			grid-area: hero;
 			color: #fffffe;
@@ -75,89 +76,92 @@
 				left: 61.1%;
 				top: 80%;
 				position: absolute;
-				display: inline-block;
-
 				background: #fe519e;
 				border: 0px;
 				border-radius: 29px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				color: black;
 			}
 			.btn:hover {
 				cursor: pointer;
 			}
 		}
 
-		&__pre-built {
-			grid-area: pre-built;
-			color: #fffffe;
-			height: 100%;
-			width: 100%;
-			font-size: 2rem;
-			display: flex;
-			flex-wrap: wrap;
-			h1 {
-				width: 100%;
-				margin-top: 3em;
-				margin-bottom: 2em;
-			}
-			h1::after,
-			h1::before {
-				content: "";
-				position: absolute;
-				background: #fe519e;
-				border: 1px solid #fe519e;
-				border-radius: 2%;
-			}
-			h1::after {
-				height: 10px;
-				width: 70px;
-				top: 42.45%;
-				left: 56.5%;
-			}
-			h1::before {
-				height: 10px;
-				width: 70px;
-				left: 58.6%;
-				top: 41.421%;
-				transform: rotate(90deg);
-			}
+		// &__pre-built {
+		// 	grid-area: pre-built;
+		// 	color: #fffffe;
+		// 	height: 100%;
+		// 	width: 100%;
+		// 	font-size: 2rem;
+		// 	display: flex;
+		// 	flex-wrap: wrap;
+		// 	h1 {
+		// 		width: 100%;
+		// 		margin-top: 3em;
+		// 		margin-bottom: 2em;
+		// 	}
+		// 	h1::after,
+		// 	h1::before {
+		// 		content: "";
+		// 		position: absolute;
+		// 		background: #fe519e;
+		// 		border: 1px solid #fe519e;
+		// 		border-radius: 2%;
+		// 	}
+		// 	h1::after {
+		// 		height: 10px;
+		// 		width: 70px;
+		// 		top: 42.45%;
+		// 		left: 56.5%;
+		// 	}
+		// 	h1::before {
+		// 		height: 10px;
+		// 		width: 70px;
+		// 		left: 58.6%;
+		// 		top: 41.421%;
+		// 		transform: rotate(90deg);
+		// 	}
 
-			.image_1 {
-				height: 100%;
-				width: 50%;
-				&::before,
-				&::after {
-					content: "";
-					position: absolute;
-					background: #fe519e;
-					border: 1px solid #fe519e;
-					border-radius: 2%;
-				}
-				&::before {
-					height: 10px;
-					width: 70px;
-					left: 37.8%;
-					top: 40.4%;
-					transform: rotate(90deg);
-				}
-				&::after {
-					height: 10px;
-					width: 70px;
-					left: 39.7%;
-					top: 39.4%;
-				}
-			}
-			.image_2 {
-				height: 100%;
-				width: 50%;
-			}
+		// 	.image_1 {
+		// 		height: 100%;
+		// 		width: 50%;
+		// 		&::before,
+		// 		&::after {
+		// 			content: "";
+		// 			position: absolute;
+		// 			background: #fe519e;
+		// 			border: 1px solid #fe519e;
+		// 			border-radius: 2%;
+		// 		}
+		// 		&::before {
+		// 			height: 10px;
+		// 			width: 70px;
+		// 			left: 37.8%;
+		// 			top: 40.4%;
+		// 			transform: rotate(90deg);
+		// 		}
+		// 		&::after {
+		// 			height: 10px;
+		// 			width: 70px;
+		// 			left: 39.7%;
+		// 			top: 39.4%;
+		// 		}
+		// 	}
+		// 	.image_2 {
+		// 		height: 100%;
+		// 		width: 50%;
+		// 	}
 
-			img {
-				height: 420px;
-				width: 480px;
-				border-radius: 2%;
-				box-shadow: 0px 0px 10px #fffffe;
-			}
-		}
+		// 	img {
+		// 		height: 420px;
+		// 		width: 480px;
+		// 		border-radius: 2%;
+		// 		box-shadow: 0px 0px 10px #fffffe;
+		// 	}
+		// }
 		&__custom-built {
 			grid-area: custom-built;
 			height: 100%;
@@ -184,12 +188,12 @@
 				border-radius: 2%;
 			}
 			h1::after {
-				top: 76.5%;
+				top: 65%;
 				left: 60.5%;
 			}
 			h1::before {
 				left: 62.6%;
-				top: 75.5%;
+				top: 63.5%;
 				transform: rotate(90deg);
 			}
 
@@ -208,12 +212,12 @@
 				border-radius: 2%;
 			}
 			&__text::before {
-				top: 74.2%;
+				top: 61.6%;
 				left: 33.5%;
 				transform: rotate(90deg);
 			}
 			&__text::after {
-				top: 73%;
+				top: 60%;
 				left: 35.05%;
 			}
 			.btn {

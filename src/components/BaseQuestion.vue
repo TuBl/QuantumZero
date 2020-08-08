@@ -22,10 +22,17 @@
 		},
 		methods: {
 			addToAnswers(option) {
-				this.$emit("update-answers", {
-					question: this.question,
-					option: option,
-				});
+				if (this.question == "What is the main purpose of your build?") {
+					this.$emit("update-questions", {
+						question: this.question,
+						option: option,
+					});
+				} else {
+					this.$emit("update-answers", {
+						question: this.question,
+						option: option,
+					});
+				}
 			},
 		},
 		// },
