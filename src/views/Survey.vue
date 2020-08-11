@@ -14,6 +14,8 @@
 </template>
 
 <script>
+	import { mapActions } from "vuex";
+
 	export default {
 		data() {
 			return {
@@ -29,6 +31,7 @@
 			};
 		},
 		methods: {
+			...mapActions(["postAnswers"]),
 			updateQuestions(e) {
 				if (e.option == "Gaming") {
 					this.questions = [
@@ -60,6 +63,11 @@
 							],
 							id: 3,
 						},
+						{
+							question: "Do you prefer Online or Bank transfer payment?",
+							options: ["Online", "Bank transfer"],
+							id: 4,
+						},
 					];
 				} else if (e.option == "Work") {
 					this.questions = [
@@ -90,6 +98,11 @@
 								"Fujirah",
 							],
 							id: 3,
+						},
+						{
+							question: "Do you prefer Online or Bank transfer payment?",
+							options: ["Online", "Bank transfer"],
+							id: 4,
 						},
 					];
 				} else {
@@ -132,16 +145,20 @@
 							],
 							id: 4,
 						},
+						{
+							question: "Do you prefer Online or Bank transfer payment?",
+							options: ["Online", "Bank transfer"],
+							id: 5,
+						},
 					];
 				}
 				this.answers.push(e);
-				// this.currentQuestion++;
 			},
 			updateAnswers(e) {
 				if (this.currentQuestion === this.questions.length - 1) {
 					this.answers.push(e);
-					console.log(this.answers);
-					this.$router.push("/");
+					this.postAnswers(this.answers);
+					this.$router.push("survey-submit");
 				} else {
 					this.answers.push(e);
 					this.currentQuestion++;
