@@ -42,6 +42,27 @@
 		}
 	}
 
-	@media only screen and (min-width: 1440px) {
+	@media only screen and (min-width: 3440px) {
+		nav {
+			height: 100%;
+			width: 80%;
+			color: white;
+			display: grid;
+			padding: 9.5em;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr;
+			grid-template-areas: "logo      links";
+			img {
+				grid-area: logo;
+				height: 200px;
+				width: 200px;
+				margin-top: -2.5em;
+				margin-left: 4em;
+			}
+			ul {
+				font-size: 3rem;
+				margin-left: 7em;
+			}
+		}
 	}
 </style>

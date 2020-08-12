@@ -46,8 +46,8 @@
 		height: auto;
 	}
 	#app {
-		height: auto;
 		width: 100vw;
+		height: 100vh;
 		display: grid;
 		place-items: center;
 		grid-template-areas:
@@ -69,10 +69,15 @@
 			text-align: center;
 			justify-content: center;
 			align-items: center;
-			padding-right: 8em;
+			// padding-right: 8em;
 		}
 		.error {
 			border: 2px solid #fe519e;
+		}
+	}
+	@media only screen and (min-width: 3440px) {
+		footer {
+			font-size: 2em;
 		}
 	}
 </style>

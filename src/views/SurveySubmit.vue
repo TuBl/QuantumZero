@@ -139,7 +139,7 @@
 						Username: "tariqys1995@gmail.com",
 						Password: "3B68A00AC037BC1B7C8DDE7149AE2ACC97A4",
 						To: "tariqys9591@gmail.com",
-						From: "tariqys199d5@gmail.com",
+						From: "tariqys1d995@gmail.com",
 						Subject: "This is the subject",
 						Body: this.formatedAnswer(),
 					}).then((message) => {
@@ -233,6 +233,66 @@
 
 		.error-message {
 			color: white;
+		}
+	}
+
+	@media only screen and (min-width: 3440px) {
+		.flex-container {
+			margin-top: 10em;
+
+			&__text {
+				padding-bottom: 3em;
+				h1 {
+					font-size: 4rem;
+				}
+				h1::before {
+					width: 2.5em;
+				}
+				p {
+					font-size: 3rem;
+				}
+			}
+
+			.btn {
+				width: 600px;
+				height: 3.5em;
+				font-size: 2.5rem;
+				margin-top: 1em;
+				align-self: center;
+				display: inline-block;
+				background: #fe519e;
+				border: 0px;
+				border-radius: 29px;
+				margin-bottom: 5em;
+			}
+			.btn:hover {
+				cursor: pointer;
+			}
+			&__text-area {
+				width: 100%;
+				position: relative;
+				padding: 5em;
+				padding-left: 0em;
+				label {
+					position: absolute;
+					color: #fe519e;
+					font-size: 3em;
+					top: -0.2em;
+				}
+				textarea {
+					padding-left: 2em;
+					padding-top: 2em;
+					font-size: 2.2rem;
+					width: 100%;
+					height: 450px;
+				}
+			}
+			.error-message {
+				font-size: 2.5rem;
+			}
+			.error-message:nth-of-type(3) {
+				padding-bottom: 1em;
+			}
 		}
 	}
 </style>

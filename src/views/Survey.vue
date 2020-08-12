@@ -171,6 +171,8 @@
 <style lang="scss" scoped>
 	.survey-container {
 		display: flex;
+		height: auto;
+		width: 100%;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;

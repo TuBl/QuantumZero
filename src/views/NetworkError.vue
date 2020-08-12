@@ -8,12 +8,18 @@
 			<p>Network Error</p>
 			<p>Please try again in a bit.</p>
 		</div>
-		<button class="main-container__btn">Back</button>
+		<button class="main-container__btn" @click="onClick">Back</button>
 	</section>
 </template>
 
 <script>
-	export default {};
+	export default {
+		methods: {
+			onClick() {
+				this.$router.push("/");
+			},
+		},
+	};
 </script>
 
 <style lang="scss" scoped>
@@ -84,6 +90,7 @@
 			}
 		}
 		&__btn {
+			cursor: pointer;
 			position: absolute;
 			bottom: 20%;
 			left: 10%;
@@ -97,6 +104,12 @@
 		}
 		&__btn:hover {
 			cursor: pointer;
+		}
+	}
+	@media only screen and (min-width: 3440px) {
+		.main-container {
+			margin-top: 10em;
+			width: 70%;
 		}
 	}
 </style>

@@ -243,7 +243,7 @@
 		}
 	}
 
-	@media only screen and (min-width: 1440px) {
+	@media only screen and (min-width: 3440px) {
 		.grid-container {
 			&__custom-built {
 				h1::after,
@@ -286,10 +286,10 @@
 					left: 41.03%;
 				}
 				.btn {
-					width: 400px;
-					height: 2.5em;
+					width: 600px;
+					height: 3.5em;
 					font-size: 2.5rem;
-					left: 42%;
+					left: 40.2%;
 					top: 90%;
 					position: absolute;
 					display: inline-block;

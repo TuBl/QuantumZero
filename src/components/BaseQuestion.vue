@@ -74,4 +74,23 @@
 			transform: scale(0.98);
 		}
 	}
+	@media only screen and (min-width: 3440px) {
+		h1 {
+			color: white;
+			margin-bottom: 2em;
+			font-size: 4rem;
+		}
+		.options {
+			.option {
+				height: 4em;
+				width: 35%;
+				font-size: 2rem;
+			}
+
+			.option:hover {
+				color: #fffffe;
+				transform: scale(0.98);
+			}
+		}
+	}
 </style>
