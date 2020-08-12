@@ -41,8 +41,12 @@
 	.router-link-exact-active {
 		color: #fe519e;
 	}
+	img {
+		width: 100%;
+		height: auto;
+	}
 	#app {
-		height: 100vh;
+		height: auto;
 		width: 100vw;
 		display: grid;
 		place-items: center;
@@ -65,6 +69,7 @@
 			text-align: center;
 			justify-content: center;
 			align-items: center;
+			padding-right: 8em;
 		}
 		.error {
 			border: 2px solid #fe519e;
