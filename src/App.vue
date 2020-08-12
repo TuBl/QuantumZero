@@ -27,6 +27,7 @@
 		background: #191821;
 		text-align: center;
 		place-items: center;
+		overflow-x: hidden;
 	}
 
 	a {

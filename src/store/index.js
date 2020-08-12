@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import axios from "axios";
+
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -10,6 +10,11 @@ export default new Vuex.Store({
 	getters: {
 		ANSWERS_GETTER: (state) => {
 			return state.answers;
+		},
+	},
+	actions: {
+		postAnswers({ commit }, answers) {
+			commit("SET_ANSWERS", answers);
 		},
 	},
 	mutations: {

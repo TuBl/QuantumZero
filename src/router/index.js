@@ -49,6 +49,24 @@ const routes = [
 		component: () =>
 			import(/* webpackChunkName: "about" */ "../views/SurveySubmit.vue"),
 	},
+	{
+		path: "/404",
+		name: "404",
+		component: () =>
+			import(/* webpackChunkName: "about" */ "../views/NotFound.vue"),
+		props: true,
+	},
+	{
+		path: "/error",
+		name: "error",
+		component: () =>
+			import(/* webpackChunkName: "about" */ "../views/NetworkError.vue"),
+		props: true,
+	},
+	{
+		path: "*",
+		redirect: { name: "404" },
+	},
 ];
 
 const router = new VueRouter({

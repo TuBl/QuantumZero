@@ -139,12 +139,23 @@
 						Username: "tariqys1995@gmail.com",
 						Password: "3B68A00AC037BC1B7C8DDE7149AE2ACC97A4",
 						To: "tariqys9591@gmail.com",
-						From: "tariqys1995@gmail.com",
+						From: "tariqys199d5@gmail.com",
 						Subject: "This is the subject",
 						Body: this.formatedAnswer(),
-					}).then((message) => alert(message));
+					}).then((message) => {
+						if (message && message == "OK") {
+							this.$router.push({ name: "Landing" });
+						} else {
+							this.$router.push({ name: "error" });
+						}
+						console.log(message);
+					});
 				} catch (error) {
-					alert(error);
+					if (error.response && error.response.status == 404) {
+						this.$router.push({ name: "404" });
+					} else {
+						this.$router.push({ name: "error" });
+					}
 				}
 			},
 		},
