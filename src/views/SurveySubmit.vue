@@ -139,7 +139,7 @@
 						Username: "tariqys1995@gmail.com",
 						Password: "3B68A00AC037BC1B7C8DDE7149AE2ACC97A4",
 						To: "tariqys9591@gmail.com",
-						From: "tariqys1d995@gmail.com",
+						From: "tariqys1995@gmail.com",
 						Subject: "This is the subject",
 						Body: this.formatedAnswer(),
 					}).then((message) => {
