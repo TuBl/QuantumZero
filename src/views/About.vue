@@ -226,4 +226,21 @@
 			}
 		}
 	}
+
+	@media only screen and (max-width: 360px) {
+		.grid-container {
+			&__text {
+				h1 {
+					font-size: 1.2rem;
+				}
+
+				p {
+					font-size: 1.2rem;
+				}
+				.icon {
+					margin-left: 67%;
+				}
+			}
+		}
+	}
 </style>

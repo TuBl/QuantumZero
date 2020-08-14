@@ -93,4 +93,19 @@
 			}
 		}
 	}
+	@media only screen and (max-width: 460px) {
+		h1 {
+			color: white;
+			margin-bottom: 2em;
+			font-size: 1.2rem;
+		}
+		.options {
+			display: flex;
+			justify-content: center;
+			padding: 1em;
+			.option {
+				width: 50%;
+			}
+		}
+	}
 </style>

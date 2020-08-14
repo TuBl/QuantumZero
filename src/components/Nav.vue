@@ -93,4 +93,32 @@
 			}
 		}
 	}
+	@media only screen and (max-width: 360px) {
+		nav {
+			height: 100%;
+			width: 100%;
+			margin-left: -8em;
+			color: white;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr;
+			grid-template-areas: "logo      links";
+			img {
+				grid-area: logo;
+				height: 60px;
+				width: 60px;
+				margin-top: 0.5em;
+			}
+			ul {
+				grid-area: links;
+				list-style: none;
+				width: 100%;
+				font-size: 1rem;
+				padding-left: 1.5em;
+				a {
+					padding: 0.5em;
+				}
+			}
+		}
+	}
 </style>

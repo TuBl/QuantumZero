@@ -106,4 +106,14 @@
 			}
 		}
 	}
+	@media only screen and (max-width: 360px) {
+		.input-container {
+			label {
+				font-size: 1.2rem;
+			}
+			input {
+				height: 4em;
+			}
+		}
+	}
 </style>

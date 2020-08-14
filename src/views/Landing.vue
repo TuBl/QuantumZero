@@ -391,4 +391,86 @@
 			}
 		}
 	}
+	@media only screen and (max-width: 360px) {
+		.grid-container {
+			margin-top: -10em;
+			place-items: center;
+			&__hero {
+				h1 {
+					text-align: center;
+					font-size: 1.3rem;
+					position: absolute;
+					top: 25%;
+					left: 18%;
+				}
+				.btn {
+					width: 10em;
+					font-size: 1.3rem;
+					left: 25%;
+				}
+				.btn:hover {
+					cursor: pointer;
+				}
+			}
+
+			&__custom-built {
+				h1 {
+					margin-bottom: 1.5em;
+					font-size: 1.5rem;
+				}
+				h1::after,
+				h1::before {
+					content: "";
+					height: 10px;
+					width: 30px;
+				}
+				h1::before {
+					top: 66.5%;
+					left: 77%;
+				}
+				h1::after {
+					top: 67.5%;
+					left: 74.2%;
+				}
+
+				&__text {
+					font-size: 1.5rem;
+					width: 80%;
+				}
+				&__text::before,
+				&__text::after {
+					content: "";
+					height: 10px;
+					width: 30px;
+				}
+				&__text::before {
+					top: 64.5%;
+					left: 14.5%;
+				}
+				&__text::after {
+					top: 63%;
+					left: 17.2%;
+				}
+				.btn {
+					width: 10em;
+					font-size: 1.5rem;
+					left: 2.5em;
+					top: 88%;
+					position: absolute;
+					display: inline-block;
+					background: #fe519e;
+					border: 0px;
+					border-radius: 29px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					text-align: center;
+					color: black;
+				}
+				.btn:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
 </style>
