@@ -312,6 +312,7 @@
 	@media only screen and (max-width: 460px) {
 		.grid-container {
 			margin-top: -10em;
+			place-items: center;
 			&__hero {
 				h1 {
 					text-align: center;

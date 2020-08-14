@@ -69,8 +69,7 @@
 		nav {
 			height: 100%;
 			width: 100%;
-			padding: 2em;
-			margin-left: -6em;
+			place-items: center;
 			color: white;
 			display: grid;
 			grid-template-columns: 1fr 1fr;
@@ -80,13 +79,14 @@
 				grid-area: logo;
 				height: 90px;
 				width: 90px;
+				margin-left: 1em;
 			}
 			ul {
 				grid-area: links;
 				list-style: none;
 				font-size: 1rem;
 				a {
-					padding: 1em;
+					padding: 0.8em;
 				}
 			}
 		}
