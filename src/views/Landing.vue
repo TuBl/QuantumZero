@@ -308,6 +308,64 @@
 			}
 		}
 	}
+	@media only screen and (max-width: 768px) {
+		.grid-container {
+			&__hero {
+				h1 {
+					font-size: 2.5rem;
+				}
+				.btn {
+					width: 8em;
+					height: 3em;
+					font-size: 2.5rem;
+					left: 50%;
+				}
+			}
+
+			&__custom-built {
+				h1 {
+					margin-bottom: 1.5em;
+					font-size: 2.5rem;
+				}
+				h1::after,
+				h1::before {
+					height: 10px;
+					width: 50px;
+				}
+				h1::before {
+					top: 67.5%;
+					left: 70.5%;
+				}
+				h1::after {
+					top: 69%;
+					left: 67.9%;
+				}
+
+				&__text {
+					font-size: 2rem;
+				}
+				&__text::before,
+				&__text::after {
+					height: 10px;
+					width: 50px;
+				}
+				&__text::before {
+					top: 66%;
+					left: 22.5%;
+				}
+				&__text::after {
+					top: 64.6%;
+					left: 25%;
+				}
+				.btn {
+					width: 10em;
+					font-size: 2.5rem;
+					left: 25%;
+					top: 90%;
+				}
+			}
+		}
+	}
 
 	@media only screen and (max-width: 460px) {
 		.grid-container {

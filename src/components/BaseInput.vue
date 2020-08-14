@@ -84,6 +84,13 @@
 			}
 		}
 	}
+	@media only screen and(max-width: 768px) {
+		.input-container {
+			label {
+				font-size: 1.5rem;
+			}
+		}
+	}
 	@media only screen and (max-width: 460px) {
 		.input-container {
 			position: relative;

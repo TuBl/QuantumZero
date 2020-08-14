@@ -295,6 +295,55 @@
 			}
 		}
 	}
+	@media only screen and (max-width: 768px) {
+		.flex-container {
+			width: 100%;
+			margin-top: 3em;
+			align-items: center;
+			&__text {
+				width: 80%;
+				h1 {
+					font-size: 2rem;
+				}
+
+				p {
+					font-size: 1.5rem;
+					padding-top: 0.5em;
+				}
+			}
+
+			.btn {
+				width: 10em;
+				font-size: 2rem;
+			}
+			.btn:hover {
+				cursor: pointer;
+			}
+			.input-container {
+				width: 80%;
+			}
+			&__text-area {
+				width: 80%;
+				position: relative;
+				padding: 5em;
+				padding-left: 0em;
+
+				label {
+					position: absolute;
+					color: #fe519e;
+					font-size: 1.5rem;
+					top: 1em;
+				}
+				textarea {
+					padding-left: 2em;
+					padding-top: 2em;
+					font-size: 1.2rem;
+					width: 100%;
+					height: 250px;
+				}
+			}
+		}
+	}
 	@media only screen and (max-width: 460px) {
 		.flex-container {
 			width: 80%;

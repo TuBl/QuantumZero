@@ -100,6 +100,14 @@
 
 <style lang="scss" scoped>
 	.flex-container {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+		width: 65%;
+		justify-content: center;
+		align-items: flex-start;
+		text-align: center;
+
 		&__text {
 			text-align: justify;
 			width: 50%;
@@ -124,13 +132,6 @@
 				font-size: 2em;
 			}
 		}
-		display: flex;
-		flex-direction: column;
-		height: auto;
-		width: 65%;
-		justify-content: center;
-		align-items: flex-start;
-		text-align: center;
 
 		.btn {
 			width: 400px;
@@ -229,10 +230,57 @@
 			}
 		}
 	}
-	@media only screen and (max-width: 460px) {
+	@media only screen and (max-width: 768px) {
 		.flex-container {
 			width: 80%;
 			margin-top: 2em;
+			align-items: center;
+			&__text {
+				width: 100%;
+				h1 {
+					font-size: 2rem;
+				}
+
+				p {
+					font-size: 1.5rem;
+					padding-top: 0.5em;
+				}
+			}
+
+			.btn {
+				width: 10em;
+				font-size: 2rem;
+			}
+			.btn:hover {
+				cursor: pointer;
+			}
+			.input-container {
+				width: 100%;
+			}
+			&__text-area {
+				width: 100%;
+				position: relative;
+				padding: 5em;
+				padding-left: 0em;
+
+				label {
+					position: absolute;
+					color: #fe519e;
+					font-size: 1.5rem;
+					top: 1em;
+				}
+				textarea {
+					padding-left: 2em;
+					padding-top: 2em;
+					font-size: 1.2rem;
+					width: 100%;
+					height: 250px;
+				}
+			}
+		}
+	}
+	@media only screen and (max-width: 460px) {
+		.flex-container {
 			&__text {
 				width: 100%;
 				h1 {
@@ -274,17 +322,12 @@
 					height: 250px;
 				}
 			}
-
-			.error-message {
-				color: white;
-			}
 		}
 	}
 
 	@media only screen and (max-width: 360px) {
 		.flex-container {
 			width: 100%;
-			align-items: center;
 			&__text {
 				width: 80%;
 				h1 {
@@ -313,10 +356,6 @@
 					width: 100%;
 					height: 250px;
 				}
-			}
-
-			.error-message {
-				color: white;
 			}
 		}
 	}

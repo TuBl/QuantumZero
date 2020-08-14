@@ -93,11 +93,11 @@
 			}
 		}
 	}
-	@media only screen and (max-width: 460px) {
+	@media only screen and (max-width: 768px) {
 		h1 {
 			color: white;
 			margin-bottom: 2em;
-			font-size: 1.2rem;
+			font-size: 2.5rem;
 		}
 		.options {
 			display: flex;
@@ -106,6 +106,11 @@
 			.option {
 				width: 50%;
 			}
+		}
+	}
+	@media only screen and (max-width: 460px) {
+		h1 {
+			font-size: 1.2rem;
 		}
 	}
 </style>

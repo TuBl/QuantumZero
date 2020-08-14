@@ -184,28 +184,27 @@
 			}
 		}
 	}
-	@media only screen and (max-width: 460px) {
+	@media only screen and (max-width: 768px) {
 		.grid-container {
-			margin-top: 2em;
+			margin-top: 3em;
 			width: 100%;
 			&__text {
 				width: 100%;
-
 				h1 {
-					font-size: 1.5rem;
+					font-size: 2.5rem;
 				}
 				h1::before {
 					top: -1em;
 				}
 				p {
-					font-size: 1.5rem;
+					font-size: 2.2rem;
 					padding-top: 0.5em;
 				}
 				.icon {
-					margin-left: 74%;
-					margin-top: 2em;
-					height: 100px;
-					width: 100px;
+					margin-left: 75%;
+					margin-top: 1em;
+					height: 150px;
+					width: 150px;
 				}
 			}
 			&__top {
@@ -223,6 +222,26 @@
 			}
 			&__bottom {
 				width: 80%;
+			}
+		}
+	}
+	@media only screen and (max-width: 460px) {
+		.grid-container {
+			margin-top: 2em;
+			&__text {
+				h1 {
+					font-size: 1.5rem;
+				}
+
+				p {
+					font-size: 1.5rem;
+				}
+				.icon {
+					margin-left: 74%;
+					margin-top: 2em;
+					height: 100px;
+					width: 100px;
+				}
 			}
 		}
 	}
