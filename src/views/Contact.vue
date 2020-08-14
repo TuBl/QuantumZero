@@ -229,4 +229,55 @@
 			}
 		}
 	}
+	@media only screen and (max-width: 460px) {
+		.flex-container {
+			width: 80%;
+
+			margin-top: 2em;
+			&__text {
+				width: 100%;
+				h1 {
+					font-size: 1.5rem;
+				}
+
+				p {
+					font-size: 1.5rem;
+				}
+			}
+
+			.btn {
+				width: 10em;
+			}
+			.btn:hover {
+				cursor: pointer;
+			}
+			.input-container {
+				width: 28em;
+			}
+			&__text-area {
+				width: 28em;
+				position: relative;
+				padding: 5em;
+				padding-left: 0em;
+
+				label {
+					position: absolute;
+					color: #fe519e;
+					font-size: 1.5rem;
+					top: 1em;
+				}
+				textarea {
+					padding-left: 2em;
+					padding-top: 2em;
+					font-size: 1.2rem;
+					width: 100%;
+					height: 250px;
+				}
+			}
+
+			.error-message {
+				color: white;
+			}
+		}
+	}
 </style>

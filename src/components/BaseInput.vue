@@ -84,4 +84,26 @@
 			}
 		}
 	}
+	@media only screen and (max-width: 460px) {
+		.input-container {
+			position: relative;
+			width: 100%;
+			padding: 5em;
+			padding-left: 0em;
+			label {
+				position: absolute;
+				color: #fe519e;
+				font-size: 1.5rem;
+				top: 1em;
+			}
+			input {
+				width: 100%;
+				height: 5em;
+				font-size: 1.2rem;
+				border-radius: 1%;
+				border: 0px;
+				padding-left: 2em;
+			}
+		}
+	}
 </style>

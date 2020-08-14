@@ -70,6 +70,7 @@
 			height: 100%;
 			width: 100%;
 			place-items: center;
+			margin-left: -10em;
 			color: white;
 			display: grid;
 			grid-template-columns: 1fr 1fr;
@@ -79,14 +80,15 @@
 				grid-area: logo;
 				height: 90px;
 				width: 90px;
-				margin-left: 1em;
+				margin-top: 0.5em;
 			}
 			ul {
 				grid-area: links;
 				list-style: none;
 				font-size: 1rem;
+				padding-left: 2.5em;
 				a {
-					padding: 0.8em;
+					padding: 1em;
 				}
 			}
 		}

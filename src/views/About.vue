@@ -184,4 +184,46 @@
 			}
 		}
 	}
+	@media only screen and (max-width: 460px) {
+		.grid-container {
+			margin-top: 2em;
+			width: 100%;
+			&__text {
+				width: 100%;
+
+				h1 {
+					font-size: 1.5rem;
+				}
+				h1::before {
+					top: -1em;
+				}
+				p {
+					font-size: 1.5rem;
+					padding-top: 0.5em;
+				}
+				.icon {
+					margin-left: 74%;
+					margin-top: 2em;
+					height: 100px;
+					width: 100px;
+				}
+			}
+			&__top {
+				grid-area: top;
+				height: 100%;
+				width: 80%;
+				display: grid;
+				grid-template-rows: 1fr;
+				grid-template-columns: 1fr;
+				grid-template-areas: "text ";
+
+				img {
+					display: none;
+				}
+			}
+			&__bottom {
+				width: 80%;
+			}
+		}
+	}
 </style>
