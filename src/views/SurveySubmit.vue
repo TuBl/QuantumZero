@@ -136,11 +136,11 @@
 				try {
 					await window.Email.send({
 						Host: "smtp.elasticemail.com",
-						Username: "tariqys1995@gmail.com",
-						Password: "3B68A00AC037BC1B7C8DDE7149AE2ACC97A4",
-						To: "tariqys9591@gmail.com",
-						From: "tariqys1995@gmail.com",
-						Subject: "This is the subject",
+						Username: "qz@quantumzero.net",
+						Password: "B58A66CCAB1B78122C3159CD28B6839F4336",
+						To: "qz@quantumzero.net",
+						From: "qz@quantumzero.net",
+						Subject: "Custom build inquiry",
 						Body: this.formatedAnswer(),
 					}).then((message) => {
 						if (message && message == "OK") {
