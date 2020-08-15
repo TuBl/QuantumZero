@@ -106,6 +106,74 @@
 			cursor: pointer;
 		}
 	}
+
+	@media only screen and (max-width: 768px) {
+		.main-container {
+			width: 100%;
+			margin-bottom: 2em;
+			margin-top: 3em;
+
+			&__first {
+				left: 25%;
+				width: 60%;
+				height: 40%;
+				border: 18px solid #fe519e;
+				transform: rotate(15deg);
+				font-size: 1.6rem;
+
+				p {
+					transform: rotate(-15deg);
+					margin-left: 1em;
+				}
+			}
+			&__second {
+				width: 60%;
+				height: 40%;
+				left: 25%;
+				border: 18px solid #fe519e;
+				transform: rotate(-25deg);
+				font-size: 1.6rem;
+				p {
+					transform: rotate(25deg);
+				}
+				p:nth-child(1) {
+					&::after {
+						height: 8px;
+					}
+				}
+			}
+			&__btn {
+				bottom: 6%;
+				left: 25%;
+				width: 10em;
+				font-size: 2rem;
+			}
+		}
+	}
+	@media only screen and (max-width: 360px) {
+		.main-container {
+			&__first {
+				left: 15%;
+				width: 70%;
+				font-size: 1rem;
+				p {
+					transform: rotate(-15deg);
+					margin-left: 1em;
+				}
+			}
+			&__second {
+				width: 70%;
+				left: 20%;
+				font-size: 1rem;
+			}
+			&__btn {
+				bottom: 6%;
+				left: 17%;
+				width: 10em;
+				font-size: 1.5rem;
+			}
+		}
+	}
 	@media only screen and (min-width: 3440px) {
 		.main-container {
 			margin-top: 10em;

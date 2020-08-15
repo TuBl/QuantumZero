@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-
+import store from "../store";
 Vue.use(VueRouter);
 
 const routes = [
@@ -62,6 +62,27 @@ const routes = [
 		component: () =>
 			import(/* webpackChunkName: "about" */ "../views/NetworkError.vue"),
 		props: true,
+		beforeEnter: (to, from, next) => {
+			store.state.error ? next() : next("/");
+		},
+		beforeLeave: (to, from, next) => {
+			store.dispatch("setErrorStatus", { success: false });
+			next();
+		},
+	},
+	{
+		path: "/thankyou",
+		name: "thankyou",
+		component: () =>
+			import(/* webpackChunkName: "about" */ "../views/ThankYou.vue"),
+		props: true,
+		beforeEnter: (to, from, next) => {
+			store.state.success ? next() : next("/");
+		},
+		beforeLeave: (to, from, next) => {
+			store.dispatch("setEmailStatus", { success: false });
+			next();
+		},
 	},
 	{
 		path: "*",

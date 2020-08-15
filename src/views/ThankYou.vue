@@ -1,12 +1,12 @@
 <template>
 	<section class="main-container">
 		<div class="main-container__first">
-			<p>Oh Oh....</p>
-			<p>Something went wrong</p>
+			<p>Thank You!</p>
+			<p>We have received your email.</p>
 		</div>
 		<div class="main-container__second">
-			<p>Network Error</p>
-			<p>Please try again in a bit.</p>
+			<p>You will hear from us</p>
+			<p>in 3-5 business days.</p>
 		</div>
 		<button class="main-container__btn" @click="onClick">Back</button>
 	</section>
@@ -47,7 +47,7 @@
 			box-sizing: border-box;
 			border-radius: 23px;
 			transform: rotate(-9.2deg);
-			font-size: 2.5rem;
+			font-size: 2.2rem;
 			line-height: 4rem;
 			p {
 				transform: rotate(9.2deg);
@@ -69,7 +69,7 @@
 			box-sizing: border-box;
 			border-radius: 23px;
 			transform: rotate(-14.25deg);
-			font-size: 2.5rem;
+			font-size: 2.2rem;
 			line-height: 4rem;
 			p {
 				transform: rotate(14.25deg);
@@ -104,6 +104,12 @@
 		}
 		&__btn:hover {
 			cursor: pointer;
+		}
+	}
+	@media only screen and (min-width: 3440px) {
+		.main-container {
+			margin-top: 10em;
+			width: 70%;
 		}
 	}
 	@media only screen and (max-width: 768px) {
@@ -171,12 +177,6 @@
 				width: 10em;
 				font-size: 1.5rem;
 			}
-		}
-	}
-	@media only screen and (min-width: 3440px) {
-		.main-container {
-			margin-top: 10em;
-			width: 70%;
 		}
 	}
 </style>

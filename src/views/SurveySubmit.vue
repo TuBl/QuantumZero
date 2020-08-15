@@ -101,7 +101,7 @@
 			},
 		},
 		methods: {
-			...mapActions(["postEmail"]),
+			...mapActions(["postEmail", "setEmailStatus", "setErrorStatus"]),
 
 			createFreshContactObject() {
 				return {
@@ -144,8 +144,10 @@
 						Body: this.formatedAnswer(),
 					}).then((message) => {
 						if (message && message == "OK") {
-							this.$router.push({ name: "Landing" });
+							this.setEmailStatus(true);
+							this.$router.push({ name: "thankyou" });
 						} else {
+							this.setErrorStatus(true);
 							this.$router.push({ name: "error" });
 						}
 						console.log(message);
@@ -154,6 +156,7 @@
 					if (error.response && error.response.status == 404) {
 						this.$router.push({ name: "404" });
 					} else {
+						this.setErrorStatus(true);
 						this.$router.push({ name: "error" });
 					}
 				}
