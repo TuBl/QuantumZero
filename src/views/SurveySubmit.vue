@@ -135,24 +135,27 @@
 			async sendEmail() {
 				try {
 					await window.Email.send({
-						Host: "smtp.elasticemail.com",
+						SecureToken: "b35328d8-3add-4c6a-85b2-41d6092d28c3",
+						Host: "mail.quantumzero.net",
 						Username: "qz@quantumzero.net",
-						Password: "B58A66CCAB1B78122C3159CD28B6839F4336",
+						Password: "*Mestream22591*",
 						To: "qz@quantumzero.net",
 						From: "qz@quantumzero.net",
 						Subject: "Custom build inquiry",
 						Body: this.formatedAnswer(),
 					}).then((message) => {
 						if (message && message == "OK") {
+							console.log(message);
 							this.setEmailStatus(true);
 							this.$router.push({ name: "thankyou" });
 						} else {
+							console.log(message);
 							this.setErrorStatus(true);
 							this.$router.push({ name: "error" });
 						}
-						console.log(message);
 					});
 				} catch (error) {
+					console.log(error);
 					if (error.response && error.response.status == 404) {
 						this.$router.push({ name: "404" });
 					} else {
@@ -161,6 +164,38 @@
 					}
 				}
 			},
+			// async sendEmail() {
+			// 	try {
+			// 		await window.Email.send({
+			// 			SecureToken: "c287c5ca-b1d3-4d27-8253-1fb1b199334a",
+			// 			Host: "smtp.elasticemail.com",
+			// 			Username: "qz@quantumzero.net",
+			// 			Password: "B58A66CCAB1B78122C3159CD28B6839F4336",
+			// 			To: "tariqys9591@gmail.com",
+			// 			From: "qz@quantumzero.net",
+			// 			Subject: "Custom build inquiry",
+			// 			Body: this.formatedAnswer(),
+			// 		}).then((message) => {
+			// 			if (message && message == "OK") {
+			// 				console.log(message);
+			// 				this.setEmailStatus(true);
+			// 				this.$router.push({ name: "thankyou" });
+			// 			} else {
+			// 				console.log(message);
+			// 				this.setErrorStatus(true);
+			// 				this.$router.push({ name: "error" });
+			// 			}
+			// 		});
+			// 	} catch (error) {
+			// 		console.log(error);
+			// 		if (error.response && error.response.status == 404) {
+			// 			this.$router.push({ name: "404" });
+			// 		} else {
+			// 			this.setErrorStatus(true);
+			// 			this.$router.push({ name: "error" });
+			// 		}
+			// 	}
+			// },
 		},
 	};
 </script>
