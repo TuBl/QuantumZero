@@ -1,5 +1,5 @@
 <template>
-	<form class="flex-container" @submit.prevent="submitHandler" novalidate>
+	<form class="flex-container" @submit.prevent="sendEmail" novalidate>
 		<div class="flex-container__text">
 			<h1>Questions? We are here to help</h1>
 			<p>
@@ -64,6 +64,7 @@
 
 <script>
 	import { required, email } from "vuelidate/lib/validators";
+	import { mapActions } from "vuex";
 
 	export default {
 		data() {
@@ -78,7 +79,13 @@
 				message: { required },
 			},
 		},
+		mounted() {
+			let script = document.createElement("script");
+			script.setAttribute("src", "https://smtpjs.com/v3/smtp.js");
+			document.head.appendChild(script);
+		},
 		methods: {
+			...mapActions(["setEmailStatus", "setErrorStatus"]),
 			createFreshContactObject() {
 				return {
 					name: "",
@@ -86,13 +93,41 @@
 					message: "",
 				};
 			},
-			submitHandler() {
-				this.$v.$touch();
-				console.log(this.$v);
-				// if (this.$v.$invalid) {
-				// 	console.log(this.contact);
-				// 	this.contact = this.createFreshContactObject();
-				// }
+			formatedAnswer() {
+				return `<html>
+					</br>
+					<h3>${this.contact.message}</h3>
+					<h4>${this.contact.name}</h4> | <h4>${this.contact.email}</h4>
+				</html>`;
+			},
+			async sendEmail() {
+				try {
+					await window.Email.send({
+						SecureToken: "b35328d8-3add-4c6a-85b2-41d6092d28c3",
+						Host: "mail.quantumzero.net",
+						Username: "qz@quantumzero.net",
+						Password: "*Mestream22591*",
+						To: "qz@quantumzero.net",
+						From: "qz@quantumzero.net",
+						Subject: "Custom build inquiry",
+						Body: this.formatedAnswer(),
+					}).then((message) => {
+						if (message && message == "OK") {
+							this.setEmailStatus(true);
+							this.$router.push({ name: "thankyou" });
+						} else {
+							this.setErrorStatus(true);
+							this.$router.push({ name: "error" });
+						}
+					});
+				} catch (error) {
+					if (error.response && error.response.status == 404) {
+						this.$router.push({ name: "404" });
+					} else {
+						this.setErrorStatus(true);
+						this.$router.push({ name: "error" });
+					}
+				}
 			},
 		},
 	};
@@ -116,6 +151,7 @@
 			h1 {
 				color: #fffffe;
 				position: relative;
+				font-size: 1.8rem;
 			}
 			h1::before {
 				content: "";
@@ -129,7 +165,7 @@
 			}
 			p {
 				color: #fe519e;
-				font-size: 2em;
+				font-size: 1.5rem;
 			}
 		}
 
@@ -233,20 +269,28 @@
 	@media only screen and (max-width: 768px) {
 		.flex-container {
 			width: 80%;
-			margin-top: 2em;
+			margin-top: 3em;
 			align-items: center;
+
 			&__text {
 				width: 100%;
 				h1 {
-					font-size: 2rem;
+					font-size: 2.5rem;
 				}
-
+				h1::before {
+					top: -1em;
+				}
 				p {
-					font-size: 1.5rem;
+					font-size: 2.2rem;
 					padding-top: 0.5em;
 				}
+				.icon {
+					margin-left: 75%;
+					margin-top: 1em;
+					height: 150px;
+					width: 150px;
+				}
 			}
-
 			.btn {
 				width: 10em;
 				font-size: 2rem;
@@ -279,16 +323,17 @@
 			}
 		}
 	}
-	@media only screen and (max-width: 460px) {
+	@media only screen and (max-width: 414px) {
 		.flex-container {
+			width: 100%;
 			&__text {
-				width: 100%;
+				width: 80%;
 				h1 {
 					font-size: 1.5rem;
 				}
 
 				p {
-					font-size: 1.5rem;
+					font-size: 1.2rem;
 				}
 			}
 
@@ -300,6 +345,7 @@
 				cursor: pointer;
 			}
 			.input-container {
+				margin-left: 20%;
 				width: 100%;
 			}
 			&__text-area {
@@ -307,7 +353,7 @@
 				position: relative;
 				padding: 5em;
 				padding-left: 0em;
-
+				margin-left: 20%;
 				label {
 					position: absolute;
 					color: #fe519e;

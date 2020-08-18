@@ -91,7 +91,7 @@
 			}
 		}
 	}
-	@media only screen and (max-width: 460px) {
+	@media only screen and (max-width: 414px) {
 		.input-container {
 			position: relative;
 			width: 100%;
@@ -105,7 +105,7 @@
 			}
 			input {
 				width: 100%;
-				height: 5em;
+				height: 3em;
 				font-size: 1.2rem;
 				border-radius: 1%;
 				border: 0px;
@@ -117,9 +117,6 @@
 		.input-container {
 			label {
 				font-size: 1.2rem;
-			}
-			input {
-				height: 4em;
 			}
 		}
 	}

@@ -4,9 +4,11 @@
 			<div class="grid-container__text">
 				<h1>Who we are...</h1>
 				<p>
-					We are a group of individuals who are driven by passion for helping
-					others to be able to get the best out of their PC, wheter the use it
-					for gaming, work or a mix of both...
+					Quantum Zero is a website where we help individuals with passion to
+					have the best possible PC for their needs to find the correct and
+					compatible computer hardware, with the cheapest possible price in the
+					globe, build the computer for them professionally and deliver it to
+					their doorstep!
 				</p>
 				<svg
 					width="220"
@@ -80,7 +82,9 @@
 			width: 90%;
 			height: auto;
 			text-align: justify;
+
 			h1 {
+				font-size: 2rem;
 				color: #fffffe;
 				position: relative;
 			}
@@ -96,7 +100,7 @@
 
 			p {
 				color: #fe519e;
-				font-size: 2em;
+				font-size: 1.5rem;
 			}
 			.icon {
 				margin-left: 68%;
@@ -140,7 +144,7 @@
 				height: auto;
 				text-align: justify;
 				h1 {
-					font-size: 4rem;
+					font-size: 3.5rem;
 				}
 				h1::before {
 					height: 0.3em;
@@ -148,12 +152,12 @@
 				}
 
 				p {
-					font-size: 3rem;
+					font-size: 2.5rem;
 				}
 				.icon {
 					margin-left: 73%;
 					height: auto;
-					width: 350px;
+					width: 325px;
 				}
 			}
 			&__top {
@@ -225,23 +229,44 @@
 			}
 		}
 	}
-	@media only screen and (max-width: 460px) {
+	@media only screen and (max-width: 414px) {
 		.grid-container {
-			margin-top: 2em;
+			margin-top: 3em;
+			width: 100%;
 			&__text {
+				width: 100%;
 				h1 {
 					font-size: 1.5rem;
 				}
-
+				h1::before {
+					top: -1em;
+				}
 				p {
-					font-size: 1.5rem;
+					font-size: 1.2rem;
+					padding-top: 0.5em;
 				}
 				.icon {
-					margin-left: 74%;
+					margin-left: 65%;
 					margin-top: 2em;
-					height: 100px;
-					width: 100px;
+					height: 120px;
+					width: 120px;
 				}
+			}
+			&__top {
+				grid-area: top;
+				height: 100%;
+				width: 80%;
+				display: grid;
+				grid-template-rows: 1fr;
+				grid-template-columns: 1fr;
+				grid-template-areas: "text ";
+
+				img {
+					display: none;
+				}
+			}
+			&__bottom {
+				width: 80%;
 			}
 		}
 	}

@@ -101,7 +101,7 @@
 			},
 		},
 		methods: {
-			...mapActions(["postEmail", "setEmailStatus", "setErrorStatus"]),
+			...mapActions(["setEmailStatus", "setErrorStatus"]),
 
 			createFreshContactObject() {
 				return {
@@ -164,38 +164,6 @@
 					}
 				}
 			},
-			// async sendEmail() {
-			// 	try {
-			// 		await window.Email.send({
-			// 			SecureToken: "c287c5ca-b1d3-4d27-8253-1fb1b199334a",
-			// 			Host: "smtp.elasticemail.com",
-			// 			Username: "qz@quantumzero.net",
-			// 			Password: "B58A66CCAB1B78122C3159CD28B6839F4336",
-			// 			To: "tariqys9591@gmail.com",
-			// 			From: "qz@quantumzero.net",
-			// 			Subject: "Custom build inquiry",
-			// 			Body: this.formatedAnswer(),
-			// 		}).then((message) => {
-			// 			if (message && message == "OK") {
-			// 				console.log(message);
-			// 				this.setEmailStatus(true);
-			// 				this.$router.push({ name: "thankyou" });
-			// 			} else {
-			// 				console.log(message);
-			// 				this.setErrorStatus(true);
-			// 				this.$router.push({ name: "error" });
-			// 			}
-			// 		});
-			// 	} catch (error) {
-			// 		console.log(error);
-			// 		if (error.response && error.response.status == 404) {
-			// 			this.$router.push({ name: "404" });
-			// 		} else {
-			// 			this.setErrorStatus(true);
-			// 			this.$router.push({ name: "error" });
-			// 		}
-			// 	}
-			// },
 		},
 	};
 </script>
@@ -211,6 +179,7 @@
 			h1 {
 				color: #fffffe;
 				position: relative;
+				font-size: 1.8rem;
 			}
 			h1::before {
 				content: "";
@@ -224,7 +193,7 @@
 			}
 			p {
 				color: #fe519e;
-				font-size: 2em;
+				font-size: 1.5rem;
 			}
 		}
 		display: flex;
@@ -382,18 +351,17 @@
 			}
 		}
 	}
-	@media only screen and (max-width: 460px) {
+	@media only screen and (max-width: 414px) {
 		.flex-container {
-			width: 80%;
-			margin-top: 2em;
+			width: 100%;
 			&__text {
-				width: 100%;
+				width: 80%;
 				h1 {
 					font-size: 1.5rem;
 				}
 
 				p {
-					font-size: 1.5rem;
+					font-size: 1.2rem;
 				}
 			}
 
@@ -405,6 +373,7 @@
 				cursor: pointer;
 			}
 			.input-container {
+				margin-left: 20%;
 				width: 100%;
 			}
 			&__text-area {
@@ -412,7 +381,7 @@
 				position: relative;
 				padding: 5em;
 				padding-left: 0em;
-
+				margin-left: 20%;
 				label {
 					position: absolute;
 					color: #fe519e;
@@ -426,10 +395,6 @@
 					width: 100%;
 					height: 250px;
 				}
-			}
-
-			.error-message {
-				color: white;
 			}
 		}
 	}

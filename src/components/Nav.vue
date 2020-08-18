@@ -80,7 +80,7 @@
 				height: 150px;
 				width: 150px;
 				margin-top: -2.5em;
-				margin-left: 5em;
+				margin-left: 0.5em;
 			}
 			ul {
 				grid-area: links;
@@ -93,7 +93,7 @@
 			}
 		}
 	}
-	@media only screen and (max-width: 460px) {
+	@media only screen and (max-width: 414px) {
 		nav {
 			height: 100%;
 			width: 100%;
@@ -109,11 +109,12 @@
 				height: 90px;
 				width: 90px;
 				margin-top: 0.5em;
+				margin-left: 4.5em;
 			}
 			ul {
 				grid-area: links;
 				list-style: none;
-				font-size: 1rem;
+				font-size: 0.9rem;
 				padding-left: 2.5em;
 				a {
 					padding: 1em;
