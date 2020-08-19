@@ -37,7 +37,7 @@
 					this.questions = [
 						{
 							question: "What Budget do you have in mind?",
-							options: ["+ 10000$", "5K - 10K", "3K - 5K", "Less than 2k"],
+							options: ["+ 10000AED", "5K - 10K", "3K - 5K", "Less than 2k"],
 							id: 1,
 						},
 						{
@@ -59,7 +59,7 @@
 								"Ajman",
 								"Ras al-Khaimah",
 								"Umm Al Quwain",
-								"Fujirah",
+								"Fujairah",
 							],
 							id: 3,
 						},
