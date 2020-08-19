@@ -60,6 +60,7 @@
 								"Ras al-Khaimah",
 								"Umm Al Quwain",
 								"Fujairah",
+								"Al-Ain",
 							],
 							id: 3,
 						},
