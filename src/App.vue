@@ -2,7 +2,7 @@
 	<div id="app">
 		<Nav class="nav"></Nav>
 		<router-view />
-		<footer>2020|Quantum Zero - All rights reserved</footer>
+		<footer>2020|Quantum Zero - All Rights Reserved</footer>
 	</div>
 </template>
 <script>
