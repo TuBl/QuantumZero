@@ -188,7 +188,40 @@
 
 	@media only screen and (min-width: 3440px) {
 		.grid-container {
+			&__pre-built {
+				grid-area: pre-built;
+				color: #fffffe;
+				height: 100%;
+				width: 100%;
+				font-size: 2rem;
+				display: grid;
+				place-items: center;
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: 1fr 1fr;
+				grid-template-areas:
+					"heading	heading"
+					"image_1	image_2";
+				&__heading {
+					grid-area: heading;
+					height: auto;
+					width: 15%;
+				}
+				img {
+					height: 420px;
+					width: 480px;
+					border-radius: 2%;
+					box-shadow: 0px 0px 10px #fffffe;
+				}
+				h3 {
+					padding-top: 1em;
+				}
+			}
 			&__custom-built {
+				&__heading {
+					grid-area: heading;
+					height: auto;
+					width: 20%;
+				}
 				.btn {
 					width: 600px;
 					height: 3.5em;
@@ -391,15 +424,41 @@
 					cursor: pointer;
 				}
 			}
+			&__pre-built {
+				font-size: 1rem;
+				display: flex;
+				margin-top: 15em;
+				flex-direction: column;
+				height: auto;
+				&__heading {
+					height: auto;
+					margin-bottom: 4em;
+					width: 50%;
+				}
+
+				.image_1 {
+					grid-area: image_1;
+					height: 100%;
+					width: 100%;
+					padding-bottom: 5em;
+				}
+				.image_2 {
+					grid-area: image_2;
+					height: 100%;
+					width: 100%;
+				}
+			}
 
 			&__custom-built {
+				margin-top: 15em;
+
 				h1 {
 					margin-bottom: 1.5em;
 					font-size: 1.5rem;
 				}
 
 				&__text {
-					font-size: 1.5rem;
+					font-size: 1.2rem;
 					width: 80%;
 				}
 
@@ -407,7 +466,7 @@
 					width: 10em;
 					font-size: 1.5rem;
 					left: 2.5em;
-					top: 88%;
+					top: 95%;
 					position: absolute;
 					display: inline-block;
 					background: #fe519e;

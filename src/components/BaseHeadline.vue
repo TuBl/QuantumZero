@@ -55,7 +55,47 @@
 			transform: rotate(180deg);
 		}
 	}
+	@media only screen and (min-width: 3440px) {
+		.headline-container {
+			h1 {
+				font-size: 5rem;
+			}
+			&__svg1 {
+				position: absolute;
+				top: 50%;
+				left: 90%;
+			}
+			&__svg2 {
+				position: absolute;
+				left: -10%;
+				top: -50%;
+				transform: rotate(180deg);
+			}
+		}
+	}
 	@media only screen and (max-width: 414px) {
+		.headline-container {
+			position: relative;
+			h1 {
+				font-size: 1.8rem;
+				color: white;
+			}
+			&__svg1 {
+				position: absolute;
+				width: 50px;
+				top: 0%;
+				left: 90%;
+			}
+			&__svg2 {
+				position: absolute;
+				width: 50px;
+				left: -10%;
+				top: -100%;
+				transform: rotate(180deg);
+			}
+		}
+	}
+	@media only screen and (max-width: 360px) {
 		.headline-container {
 			position: relative;
 			h1 {

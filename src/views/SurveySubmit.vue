@@ -398,7 +398,43 @@
 			}
 		}
 	}
+	@media only screen and (max-width: 375px) {
+		.flex-container {
+			&__text {
+				width: 80%;
+				h1 {
+					font-size: 1rem;
+				}
 
+				p {
+					font-size: 1rem;
+				}
+			}
+			.input-container {
+				margin-left: 4em;
+			}
+			&__text-area {
+				margin-left: 4em;
+				label {
+					position: absolute;
+					color: #fe519e;
+					font-size: 1.2rem;
+					top: 1em;
+				}
+				textarea {
+					padding-left: 2em;
+					padding-top: 2em;
+					font-size: 1.2rem;
+					width: 100%;
+					height: 250px;
+				}
+			}
+
+			.error-message {
+				color: white;
+			}
+		}
+	}
 	@media only screen and (max-width: 360px) {
 		.flex-container {
 			width: 100%;
@@ -410,7 +446,7 @@
 				}
 
 				p {
-					font-size: 1.2rem;
+					font-size: 1rem;
 				}
 			}
 			.input-container {

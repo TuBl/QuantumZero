@@ -152,7 +152,7 @@
 				}
 
 				p {
-					font-size: 2.5rem;
+					font-size: 2.2rem;
 				}
 				.icon {
 					margin-left: 73%;
@@ -171,7 +171,7 @@
 
 				img {
 					grid-area: image;
-					height: 100%;
+					height: auto;
 					width: 100%;
 					border-radius: 1.5%;
 				}
@@ -201,7 +201,7 @@
 					top: -1em;
 				}
 				p {
-					font-size: 2.2rem;
+					font-size: 1.8rem;
 					padding-top: 0.5em;
 				}
 				.icon {
@@ -242,7 +242,7 @@
 					top: -1em;
 				}
 				p {
-					font-size: 1.2rem;
+					font-size: 1rem;
 					padding-top: 0.5em;
 				}
 				.icon {
@@ -270,7 +270,35 @@
 			}
 		}
 	}
+	@media only screen and (max-width: 375px) {
+		.grid-container {
+			&__text {
+				p {
+					font-size: 0.9rem;
+				}
+				.icon {
+					height: 100px;
+					width: 100px;
+				}
+			}
+			&__top {
+				grid-area: top;
+				height: 100%;
+				width: 80%;
+				display: grid;
+				grid-template-rows: 1fr;
+				grid-template-columns: 1fr;
+				grid-template-areas: "text ";
 
+				img {
+					display: none;
+				}
+			}
+			&__bottom {
+				width: 80%;
+			}
+		}
+	}
 	@media only screen and (max-width: 360px) {
 		.grid-container {
 			&__text {
@@ -279,10 +307,12 @@
 				}
 
 				p {
-					font-size: 1.2rem;
+					font-size: 1rem;
 				}
 				.icon {
-					margin-left: 67%;
+					margin-left: 73%;
+					height: 75px;
+					width: 75px;
 				}
 			}
 		}

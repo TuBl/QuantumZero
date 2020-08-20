@@ -122,6 +122,11 @@
 			}
 		}
 	}
+	@media only screen and (max-width: 375px) {
+		nav {
+			margin-left: -12em;
+		}
+	}
 	@media only screen and (max-width: 360px) {
 		nav {
 			height: 100%;
