@@ -37,16 +37,16 @@
 					this.questions = [
 						{
 							question: "What Budget do you have in mind?",
-							options: ["+ 10000$", "5K - 10K", "3K - 5K", "Less than 2k"],
+							options: ["+ 10000 AED", "5K - 10K", "3K - 5K", "Less than 3k"],
 							id: 1,
 						},
 						{
 							question: "What kind of games do you plan on playing?",
 							options: [
-								"AAA (4K@60fps)",
-								"AAA (1080P@60fps)",
-								"MMORPGS",
-								"MOBAs",
+								"4K@60FPS",
+								"1440P@60FPS",
+								"1080P@60FPS",
+								"Low Demanding Games",
 							],
 							id: 2,
 						},
@@ -59,7 +59,7 @@
 								"Ajman",
 								"Ras al-Khaimah",
 								"Umm Al Quwain",
-								"Fujirah",
+								"Fujairah",
 							],
 							id: 3,
 						},
@@ -73,11 +73,11 @@
 					this.questions = [
 						{
 							question: "What Budget do you have in mind?",
-							options: ["+ 10000$", "5K - 10K", "3K - 5K", "Less than 2k"],
+							options: ["+ 10000 AED", "5K - 10K", "3K - 5K", "Less than 3k"],
 							id: 1,
 						},
 						{
-							question: "What kind of activities do you do?",
+							question: "What kind of work do you mainly practice?",
 							options: [
 								"Engineering Design",
 								"Graphic Design",
@@ -95,7 +95,7 @@
 								"Ajman",
 								"Ras al-Khaimah",
 								"Umm Al Quwain",
-								"Fujirah",
+								"Fujairah",
 							],
 							id: 3,
 						},
@@ -109,11 +109,11 @@
 					this.questions = [
 						{
 							question: "What Budget do you have in mind?",
-							options: ["+ 10000$", "5K - 10K", "3K - 5K", "Less than 2k"],
+							options: ["+ 10000 AED", "5K - 10K", "3K - 5K", "Less than 3k"],
 							id: 1,
 						},
 						{
-							question: "What kind of activities do you do?",
+							question: "What kind of work do you mainly practice?",
 							options: [
 								"Engineering Design",
 								"Graphic Design",
@@ -125,10 +125,10 @@
 						{
 							question: "What kind of games do you plan on playing?",
 							options: [
-								"AAA (4K@60fps)",
-								"AAA (1080P@60fps)",
-								"MMORPGS",
-								"MOBAs",
+								"4K@60FPS",
+								"1440P@60FPS",
+								"1080P@60FPS",
+								"Low Demanding Games",
 							],
 							id: 3,
 						},
@@ -141,7 +141,7 @@
 								"Ajman",
 								"Ras al-Khaimah",
 								"Umm Al Quwain",
-								"Fujirah",
+								"Fujairah",
 							],
 							id: 4,
 						},
