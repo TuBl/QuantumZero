@@ -104,6 +104,8 @@
 			}
 			.icon {
 				margin-left: 68%;
+				width: 10em;
+				height: 10em;
 			}
 		}
 		&__top {
@@ -187,6 +189,48 @@
 				}
 			}
 		}
+	}
+
+	@media only screen and (max-width: 1600px) {
+		.grid-container {
+			&__text {
+				p {
+					font-size: 1.4rem;
+				}
+				.icon {
+					width: 10em;
+					height: 10em;
+				}
+			}
+		}
+	}
+	@media only screen and (max-width: 1440px) {
+		.grid-container {
+			&__text {
+				p {
+					font-size: 1.1rem;
+				}
+				.icon {
+					margin-top: 5em;
+				}
+			}
+		}
+	}
+	@media only screen and (max-width: 1440px) {
+		.grid-container {
+			&__text {
+				p {
+					font-size: 1.1rem;
+				}
+				.icon {
+					margin-top: 0em;
+					width: 8em;
+					height: 8em;
+				}
+			}
+		}
+	}
+	@media only screen and (max-width: 768px) {
 	}
 	@media only screen and (max-width: 768px) {
 		.grid-container {
