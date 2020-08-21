@@ -188,6 +188,8 @@
 
 	@media only screen and (min-width: 3440px) {
 		.grid-container {
+			gap: 12em;
+
 			&__pre-built {
 				grid-area: pre-built;
 				color: #fffffe;
