@@ -74,7 +74,7 @@
 			},
 			motherBoard() {
 				if (this.$route.params.id == 1) {
-					return "ASUS Republic of Gamers Maximus XII Extreme LGA 1200 E-ATX Motherboard";
+					return "ASUS Republic of Gamers Maximus XII Extreme LGA 1200 E-ATX";
 				} else {
 					return "ASUS ROG Maximus XII Hero (Wi-Fi AC) LGA 1200";
 				}
