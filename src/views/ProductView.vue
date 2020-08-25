@@ -12,7 +12,7 @@
 			<li>SSD: {{ ssd }}</li>
 			<li v-if="$route.params.id == `1`">SSD2: {{ ssd }}</li>
 			<li v-if="$route.params.id == `2`">HDD: {{ hdd }}</li>
-			<li>Mother Board: {{ motherBoard }}</li>
+			<li>Motherboard: {{ motherBoard }}</li>
 			<li>PSU: {{ psu }}</li>
 		</ul>
 	</section>
@@ -45,14 +45,14 @@
 				if (this.$route.params.id == 1) {
 					return "i9-10900K 10-Core 3.7 GHz";
 				} else {
-					return "i7-8700K 6-Core 3.7 GHz";
+					return "i7-10700K 8-Core 3.8 GHz";
 				}
 			},
 			gpu() {
 				if (this.$route.params.id == 1) {
 					return "GTX 2080 Ti ";
 				} else {
-					return "GTX 1080 Ti";
+					return "GTX 2070 Super";
 				}
 			},
 			ram() {
@@ -64,9 +64,9 @@
 			},
 			ssd() {
 				if (this.$route.params.id == 1) {
-					return "Samsung 970 EVO Plus Series - 2TP PCIe NVMe - M.2 Internal SSD  ";
+					return "Samsung 970 EVO Plus Series - 1TB PCIe NVMe - M.2 Internal SSD  ";
 				} else {
-					return '860 EVO Series 2.5" 500GB SATA III';
+					return 'Samsung 970 EVO Plus Series - 2TB PCIe NVMe - M.2 Internal SSD';
 				}
 			},
 			hdd() {
@@ -76,12 +76,12 @@
 				if (this.$route.params.id == 1) {
 					return "ASUS Republic of Gamers Maximus XII Extreme LGA 1200 E-ATX Motherboard";
 				} else {
-					return "ASUS ROG Maximus X Hero (Wi-Fi AC) LGA 1151 (300 Series) Intel Z370 SATA 6Gb/s ATX Intel Motherboard";
+					return "ASUS ROG Maximus XII Hero (Wi-Fi AC) LGA 1200";
 				}
 			},
 			psu() {
 				if (this.$route.params.id == 1) {
-					return "CORSAIR HXi Series HX1200i 850W 80 PLUS PLATINUM Haswell Ready Full Modular";
+					return "CORSAIR HXi Series HX1200i 1200W 80 PLUS PLATINUM Haswell Ready Full Modular";
 				} else {
 					return "CORSAIR HXi Series HX850i 850W 80 PLUS PLATINUM Haswell Ready Full Modular";
 				}
