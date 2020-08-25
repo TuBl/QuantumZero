@@ -50,6 +50,18 @@ const routes = [
 			import(/* webpackChunkName: "about" */ "../views/SurveySubmit.vue"),
 	},
 	{
+		path: "/product/:id",
+		name: "ProductView",
+		// route level code-splitting
+		// this generates a separate chunk (about.[hash].js) for this route
+		// which is lazy-loaded when the route is visited.
+		beforeEnter: (to, from, next) => {
+			to.params.id > 0 && to.params.id <= 2 ? next() : next("/404");
+		},
+		component: () =>
+			import(/* webpackChunkName: "about" */ "../views/ProductView.vue"),
+	},
+	{
 		path: "/404",
 		name: "404",
 		component: () =>

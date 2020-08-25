@@ -62,8 +62,8 @@
 			}
 			&__svg1 {
 				position: absolute;
-				top: 50%;
-				left: 90%;
+				top: 55%;
+				left: 92%;
 			}
 			&__svg2 {
 				position: absolute;

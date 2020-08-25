@@ -28,6 +28,7 @@
 	h3 {
 		padding-top: 1em;
 		padding-left: 0.5em;
+		color: #fffffe;
 	}
 	@media only screen and (min-width: 3440px) {
 		img {

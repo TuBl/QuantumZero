@@ -12,16 +12,20 @@
 				class="grid-container__pre-built__heading"
 				text="PRE-BUILT"
 			/>
-			<Product
-				class="image_1"
-				imgName="out-world-min.jpg"
-				text="Out of this world tier"
-			></Product>
-			<Product
-				class="image_2"
-				imgName="diamong-tier.jpg"
-				text="Diamond tier"
-			></Product>
+			<router-link to="/product/1">
+				<Product
+					class="image_1"
+					imgName="out-world-min.jpg"
+					text="Out of this world tier"
+				></Product>
+			</router-link>
+			<router-link to="/product/2">
+				<Product
+					class="image_2"
+					imgName="diamong-tier.jpg"
+					text="Diamond tier"
+				></Product>
+			</router-link>
 		</div>
 
 		<div class="grid-container__custom-built">
@@ -223,7 +227,12 @@
 					grid-area: heading;
 					height: auto;
 					width: 20%;
+					padding-bottom: 2em;
 				}
+				&__text {
+					font-size: 3.1rem;
+				}
+				padding-bottom: 5em;
 				.btn {
 					width: 600px;
 					height: 3.5em;

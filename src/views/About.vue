@@ -230,8 +230,7 @@
 			}
 		}
 	}
-	@media only screen and (max-width: 768px) {
-	}
+
 	@media only screen and (max-width: 768px) {
 		.grid-container {
 			margin-top: 3em;
@@ -245,7 +244,7 @@
 					top: -1em;
 				}
 				p {
-					font-size: 1.8rem;
+					font-size: 1.4rem;
 					padding-top: 0.5em;
 				}
 				.icon {
