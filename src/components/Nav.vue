@@ -25,6 +25,7 @@
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr;
 		grid-template-areas: "logo      links";
+
 		img {
 			grid-area: logo;
 			height: 150px;
