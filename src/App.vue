@@ -79,6 +79,11 @@
 		}
 	}
 	@media only screen and (min-width: 3440px) {
+		#app {
+			.view {
+				padding-top: 15rem;
+			}
+		}
 		footer {
 			font-size: 2em;
 		}

@@ -209,8 +209,6 @@
 	}
 	@media only screen and (min-width: 3440px) {
 		.flex-container {
-			margin-top: 10em;
-
 			&__text {
 				padding-bottom: 3em;
 				h1 {
