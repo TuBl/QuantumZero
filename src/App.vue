@@ -1,7 +1,7 @@
 <template>
 	<div id="app">
 		<Nav class="nav"></Nav>
-		<router-view />
+		<router-view class="view" />
 		<footer>2020|Quantum Zero - All Rights Reserved</footer>
 	</div>
 </template>
@@ -55,9 +55,12 @@
 			"view"
 			"footer";
 		grid-template-columns: 1fr;
-		grid-template-rows: 150px 1fr 50px;
+		grid-template-rows: 10rem 1fr 50px;
 		.nav {
 			z-index: 10000;
+		}
+		.view {
+			padding-top: 5rem;
 		}
 		footer {
 			grid-area: footer;
