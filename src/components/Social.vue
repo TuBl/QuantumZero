@@ -47,6 +47,12 @@
 		height: 0.75em;
 		margin: 0.2em;
 	}
+	.icon:hover {
+		transform: scale(0.98);
+		opacity: 0.9;
+		transition: transform, opacity 200ms ease-in-out forwards;
+	}
+
 	.facebook {
 		background-color: #1877f2;
 	}
