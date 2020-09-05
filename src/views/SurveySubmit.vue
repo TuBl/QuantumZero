@@ -72,7 +72,7 @@
 <script>
 	import { required, email, numeric } from "vuelidate/lib/validators";
 	import { mapGetters, mapActions } from "vuex";
-	// import axios from "axios";
+	import NProgress from "nprogress";
 
 	export default {
 		data() {
@@ -133,34 +133,38 @@
 			},
 
 			async sendEmail() {
-				try {
-					await window.Email.send({
-						SecureToken: "b35328d8-3add-4c6a-85b2-41d6092d28c3",
-						Host: "mail.quantumzero.net",
-						Username: "qz@quantumzero.net",
-						Password: "*Mestream22591*",
-						To: "qz@quantumzero.net",
-						From: "qz@quantumzero.net",
-						Subject: "Custom build inquiry",
-						Body: this.formatedAnswer(),
-					}).then((message) => {
-						if (message && message == "OK") {
-							console.log(message);
-							this.setEmailStatus(true);
-							this.$router.push({ name: "thankyou" });
+				this.$v.$touch();
+				if (!this.$v.$invalid) {
+					try {
+						NProgress.start();
+						await window.Email.send({
+							SecureToken: "b35328d8-3add-4c6a-85b2-41d6092d28c3",
+							Host: "mail.quantumzero.net",
+							Username: "qz@quantumzero.net",
+							Password: "*Mestream22591*",
+							To: "qz@quantumzero.net",
+							From: "qz@quantumzero.net",
+							Subject: "Custom build inquiry",
+							Body: this.formatedAnswer(),
+						}).then((message) => {
+							if (message && message == "OK") {
+								NProgress.done();
+								this.setEmailStatus(true);
+								this.$router.push({ name: "thankyou" });
+							} else {
+								NProgress.done();
+								this.setErrorStatus(true);
+								this.$router.push({ name: "error" });
+							}
+						});
+					} catch (error) {
+						NProgress.done();
+						if (error.response && error.response.status == 404) {
+							this.$router.push({ name: "404" });
 						} else {
-							console.log(message);
 							this.setErrorStatus(true);
 							this.$router.push({ name: "error" });
 						}
-					});
-				} catch (error) {
-					console.log(error);
-					if (error.response && error.response.status == 404) {
-						this.$router.push({ name: "404" });
-					} else {
-						this.setErrorStatus(true);
-						this.$router.push({ name: "error" });
 					}
 				}
 			},
