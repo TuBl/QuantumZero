@@ -267,7 +267,6 @@
 	@media only screen and (max-width: 768px) {
 		.flex-container {
 			width: 80%;
-			margin-top: 3em;
 			align-items: center;
 
 			&__text {

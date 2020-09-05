@@ -2,14 +2,21 @@
 	<div id="app">
 		<Nav class="nav"></Nav>
 		<router-view class="view" />
-		<footer>2020|Quantum Zero - All Rights Reserved</footer>
+		<!-- <footer>2020|Quantum Zero - All Rights Reserved</footer> -->
+		<footer>
+			<span>2020|Quantum Zero - All Rights Reserved</span
+			><Social class="social" />
+		</footer>
 	</div>
 </template>
 <script>
 	import Nav from "./components/Nav";
+	import Social from "./components/Social";
+
 	export default {
 		components: {
 			Nav,
+			Social,
 		},
 	};
 </script>
@@ -55,7 +62,7 @@
 			"view"
 			"footer";
 		grid-template-columns: 1fr;
-		grid-template-rows: 10rem 1fr 50px;
+		grid-template-rows: 10rem 1fr 10rem;
 		.nav {
 			z-index: 10000;
 		}
@@ -69,10 +76,10 @@
 			background: #fe519e;
 			color: black;
 			display: flex;
+			flex-direction: column;
 			text-align: center;
 			justify-content: center;
 			align-items: center;
-			// padding-right: 8em;
 		}
 		.error {
 			border: 2px solid #fe519e;
@@ -80,6 +87,8 @@
 	}
 	@media only screen and (min-width: 3440px) {
 		#app {
+			grid-template-rows: 10rem 1fr 15rem;
+
 			.view {
 				padding-top: 15rem;
 			}

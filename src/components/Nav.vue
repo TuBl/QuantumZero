@@ -1,7 +1,6 @@
 <template>
 	<nav>
 		<img src="../assets/logo.png" alt="" class="logo" />
-		<Social class="nav__social" />
 
 		<ul class="nav__links">
 			<router-link to="/">Home</router-link>
@@ -12,11 +11,11 @@
 </template>
 
 <script>
-	import Social from "./Social";
+	// import Social from "./Social";
 	export default {
 		name: "Nav",
 		components: {
-			Social,
+			// Social,
 		},
 	};
 </script>

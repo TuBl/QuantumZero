@@ -170,7 +170,7 @@
 
 <style lang="scss" scoped>
 	.flex-container {
-		margin-top: 5em;
+		// margin-top: 5em;
 		&__text {
 			text-align: justify;
 			width: 50%;
@@ -245,7 +245,7 @@
 
 	@media only screen and (min-width: 3440px) {
 		.flex-container {
-			margin-top: 10em;
+			// margin-top: 10em;
 
 			&__text {
 				padding-bottom: 3em;
@@ -305,7 +305,7 @@
 	@media only screen and (max-width: 768px) {
 		.flex-container {
 			width: 100%;
-			margin-top: 3em;
+			// margin-top: 3em;
 			align-items: center;
 			&__text {
 				width: 80%;

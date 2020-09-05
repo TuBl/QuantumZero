@@ -139,7 +139,7 @@
 	@media only screen and (min-width: 3440px) {
 		.grid-container {
 			position: relative;
-			margin-top: 10em;
+			// margin-top: 10em;
 			&__text {
 				grid-area: text;
 				width: 90%;
@@ -233,7 +233,7 @@
 
 	@media only screen and (max-width: 768px) {
 		.grid-container {
-			margin-top: 3em;
+			// margin-top: 3em;
 			width: 100%;
 			&__text {
 				width: 100%;
@@ -274,7 +274,6 @@
 	}
 	@media only screen and (max-width: 414px) {
 		.grid-container {
-			margin-top: 3em;
 			width: 100%;
 			&__text {
 				width: 100%;

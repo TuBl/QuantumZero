@@ -15,14 +15,14 @@
 				class="icon facebook"
 			></fa-icon>
 		</a>
-		<a href="" target="_blank">
+		<a href="https://twitter.com/quantumzeronet" target="_blank">
 			<fa-icon
 				:icon="['fab', 'twitter-square']"
 				size="4x"
 				class="icon twitter"
 			></fa-icon>
 		</a>
-		<a href="" target="_blank">
+		<a href="https://api.whatsapp.com/send?phone=+971559666809" target="_blank">
 			<fa-icon
 				:icon="['fab', 'whatsapp-square']"
 				size="4x"
