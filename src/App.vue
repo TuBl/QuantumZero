@@ -30,8 +30,13 @@
 		padding: 0;
 		font-family: "Montserrat", sans-serif;
 	}
+	:root {
+		--bg-primary: #191821;
+		--text-primary: #fe519e;
+		--link-default: #977e8b;
+	}
 	body {
-		background: #191821;
+		background: var(--bg-primary);
 		text-align: center;
 		place-items: center;
 		overflow-x: hidden;
@@ -68,6 +73,7 @@
 		}
 		.view {
 			padding-top: 5rem;
+			padding-bottom: 5rem;
 		}
 		footer {
 			grid-area: footer;

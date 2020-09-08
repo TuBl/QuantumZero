@@ -4,7 +4,7 @@
 			<h1 class="grid-container__hero-text">
 				Your dream build starts <br />here
 			</h1>
-			<router-link to="/survey" class="btn">START</router-link>
+			<router-link to="/learn-more" class="btn">Learn More</router-link>
 		</div>
 
 		<div class="grid-container__pre-built">
