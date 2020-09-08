@@ -50,9 +50,9 @@
 			},
 			gpu() {
 				if (this.$route.params.id == 1) {
-					return "GTX 2080 Ti ";
+					return "RTX 2080 Ti ";
 				} else {
-					return "GTX 2070 Super";
+					return "RTX 2070 Super";
 				}
 			},
 			ram() {
