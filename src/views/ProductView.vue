@@ -66,7 +66,7 @@
 				if (this.$route.params.id == 1) {
 					return "Samsung 970 EVO Plus Series - 1TB PCIe NVMe - M.2 Internal SSD  ";
 				} else {
-					return 'Samsung 970 EVO Plus Series - 2TB PCIe NVMe - M.2 Internal SSD';
+					return "Samsung 970 EVO Plus Series - 2TB PCIe NVMe - M.2 Internal SSD";
 				}
 			},
 			hdd() {
@@ -119,7 +119,7 @@
 	@media only screen and (max-width: 3440px) {
 		.product-container {
 			width: 65%;
-			margin-top: 10rem;
+			// margin-top: 10rem;
 			margin-bottom: 10rem;
 			&__product {
 				margin-bottom: 5rem;
@@ -154,11 +154,4 @@
 			width: 100%;
 		}
 	}
-	// @media only screen and (max-width: 768px) {
-	// 	.product-container {
-	// 		&__descreption {
-	// 			font-size: 0.8rem;
-	// 		}
-	// 	}
-	// }
 </style>

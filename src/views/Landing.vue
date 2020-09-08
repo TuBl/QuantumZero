@@ -57,7 +57,7 @@
 		display: grid;
 		height: auto;
 		position: relative;
-		margin-top: -10em;
+		margin-top: -15em;
 		width: 100%;
 		grid-template-columns: 1fr;
 		grid-template-areas:
@@ -193,7 +193,7 @@
 	@media only screen and (min-width: 3440px) {
 		.grid-container {
 			gap: 12em;
-
+			margin-top: -25rem;
 			&__pre-built {
 				grid-area: pre-built;
 				color: #fffffe;
@@ -261,7 +261,7 @@
 			display: grid;
 			height: auto;
 			position: relative;
-			margin-top: -10em;
+			margin-top: -15em;
 			width: 100%;
 			grid-template-columns: 1fr;
 			grid-template-areas:
@@ -337,7 +337,6 @@
 
 	@media only screen and (max-width: 414px) {
 		.grid-container {
-			margin-top: -10em;
 			place-items: center;
 			&__hero {
 				h1 {
@@ -414,7 +413,6 @@
 	}
 	@media only screen and (max-width: 360px) {
 		.grid-container {
-			margin-top: -10em;
 			place-items: center;
 			&__hero {
 				background: url("../assets/hero-360.jpg");

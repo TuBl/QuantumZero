@@ -209,8 +209,6 @@
 	}
 	@media only screen and (min-width: 3440px) {
 		.flex-container {
-			margin-top: 10em;
-
 			&__text {
 				padding-bottom: 3em;
 				h1 {
@@ -269,7 +267,6 @@
 	@media only screen and (max-width: 768px) {
 		.flex-container {
 			width: 80%;
-			margin-top: 3em;
 			align-items: center;
 
 			&__text {

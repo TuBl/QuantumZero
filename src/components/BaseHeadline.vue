@@ -11,7 +11,7 @@
 			<line y1="68" x2="85" y2="68" stroke="#FE519E" stroke-width="12" />
 			<line x1="79" y1="74" x2="79" stroke="#FE519E" stroke-width="12" />
 		</svg>
-		<h1>{{ text }}</h1>
+		<h1 class="logo">{{ text }}</h1>
 		<svg
 			width="85"
 			height="74"
@@ -80,6 +80,7 @@
 				font-size: 1.8rem;
 				color: white;
 			}
+
 			&__svg1 {
 				position: absolute;
 				width: 50px;

@@ -111,7 +111,7 @@
 		.main-container {
 			width: 100%;
 			margin-bottom: 2em;
-			margin-top: 3em;
+			// margin-top: 3em;
 
 			&__first {
 				left: 25%;
@@ -176,7 +176,7 @@
 	}
 	@media only screen and (min-width: 3440px) {
 		.main-container {
-			margin-top: 10em;
+			// margin-top: 10em;
 			width: 70%;
 		}
 	}
