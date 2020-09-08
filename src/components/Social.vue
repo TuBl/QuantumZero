@@ -22,7 +22,7 @@
 				class="icon twitter"
 			></fa-icon>
 		</a>
-		<a href="https://api.whatsapp.com/send?phone=+971559666809" target="_blank">
+		<a href="https://api.whatsapp.com/send?phone=+971509906770" target="_blank">
 			<fa-icon
 				:icon="['fab', 'whatsapp-square']"
 				size="4x"
