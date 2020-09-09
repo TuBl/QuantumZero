@@ -29,7 +29,7 @@
 			:id="4"
 		></Person>
 		<Person
-			:direction="true"
+			:direction="false"
 			text="Pay via PayPal or transfer"
 			imgName="person-5.svg"
 			class="person5"
