@@ -42,7 +42,8 @@
 			class="person6"
 			:id="6"
 		></Person>
-		<router-link to="/" class="btn">Home</router-link>
+		<router-link to="/survey" class="btn">Get Started</router-link>
+		<router-link to="/" class="btn2">Home</router-link>
 	</div>
 
 	<!-- <Person :direction="false" text="lorem ipsum" imgName="person-1.svg"></Person> -->
@@ -73,7 +74,8 @@
 			"person4    person4"
 			"person5    person5"
 			"person6    person6"
-			"btn    	btn";
+			"btn    	btn"
+			"btn2    	btn2";
 		.person1 {
 			grid-area: person1;
 			width: 100%;
@@ -110,10 +112,23 @@
 			color: black;
 			border-radius: 1em;
 		}
+		.btn2 {
+			grid-area: btn2;
+			background: var(--text-primary);
+			width: 50%;
+			height: 2.5em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			color: black;
+			border-radius: 1em;
+		}
 	}
 	@media only screen and (min-width: 3440px) {
 		.people__container {
-			.btn {
+			.btn,
+			.btn2 {
 				height: 3.5rem;
 				font-size: 2rem;
 				width: 25%;
