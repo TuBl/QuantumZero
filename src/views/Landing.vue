@@ -26,6 +26,20 @@
 					text="Diamond tier"
 				></Product>
 			</router-link>
+			<router-link to="/product/3">
+				<Product
+					class="image_3"
+					imgName="pre-built.jpg"
+					text="Gold tier"
+				></Product>
+			</router-link>
+			<router-link to="/product/4">
+				<Product
+					class="image_4"
+					imgName="pre-built-2.jpg"
+					text="Silver tier"
+				></Product>
+			</router-link>
 		</div>
 
 		<div class="grid-container__custom-built">
@@ -64,7 +78,7 @@
 			"hero"
 			"pre-built"
 			"custom-built";
-		grid-template-rows: 100vh 100vh 100vh;
+		grid-template-rows: 100vh 1fr 0.8fr;
 		margin-bottom: 3.5em;
 
 		&__hero {
@@ -117,11 +131,13 @@
 			font-size: 2rem;
 			display: grid;
 			place-items: center;
+			row-gap: 5rem;
 			grid-template-columns: 1fr 1fr;
-			grid-template-rows: 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr;
 			grid-template-areas:
 				"heading	heading"
-				"image_1	image_2";
+				"image_1	image_2"
+				"image_3	image_4";
 			&__heading {
 				grid-area: heading;
 				height: auto;
@@ -143,6 +159,16 @@
 			}
 			.image_2 {
 				grid-area: image_2;
+				height: 100%;
+				width: 100%;
+			}
+			.image_3 {
+				grid-area: image_3;
+				height: 100%;
+				width: 100%;
+			}
+			.image_4 {
+				grid-area: image_4;
 				height: 100%;
 				width: 100%;
 			}
@@ -202,11 +228,7 @@
 				font-size: 2rem;
 				display: grid;
 				place-items: center;
-				grid-template-columns: 1fr 1fr;
-				grid-template-rows: 1fr 1fr;
-				grid-template-areas:
-					"heading	heading"
-					"image_1	image_2";
+
 				&__heading {
 					grid-area: heading;
 					height: auto;

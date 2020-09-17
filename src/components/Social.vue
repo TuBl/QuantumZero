@@ -29,6 +29,13 @@
 				class="icon whatsapp"
 			></fa-icon>
 		</a>
+		<a href="https://www.paypal.com/paypalme/quantumzeronet" target="_blank">
+			<fa-icon
+				:icon="['fab', 'paypal']"
+				size="4x"
+				class="icon paypal"
+			></fa-icon>
+		</a>
 	</div>
 </template>
 
@@ -69,6 +76,9 @@
 	}
 	.twitter {
 		background: #55ace3;
+	}
+	.paypal {
+		background: rgb(0, 90, 149);
 	}
 
 	@media only screen and (max-width: 414px) {

@@ -30,8 +30,12 @@
 			imgName() {
 				if (this.$route.params.id == 1) {
 					return "out-world-min.jpg";
-				} else {
+				} else if (this.$route.params.id == 2) {
 					return "diamong-tier.jpg";
+				} else if (this.$route.params.id == 3) {
+					return "pre-built.jpg";
+				} else {
+					return "pre-built-2.jpg";
 				}
 			},
 			text() {

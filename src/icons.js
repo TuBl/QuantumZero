@@ -5,12 +5,14 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
 import { faTwitterSquare } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsappSquare } from "@fortawesome/free-brands-svg-icons";
+import { faPaypal } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 library.add(
 	faInstagramSquare,
 	faInstagram,
 	faFacebookSquare,
 	faWhatsappSquare,
-	faTwitterSquare
+	faTwitterSquare,
+	faPaypal
 );
 Vue.component("fa-icon", FontAwesomeIcon);
